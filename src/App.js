@@ -5,12 +5,14 @@ import { theme } from './theme';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Login from "./forms/login";
 import Signup from './forms/signup';
+import Navbar from './forms/navbar';
 
 function App() {
   return (
     <>
      <ThemeProvider theme={theme}>
         <CssBaseline/>
+        <Navbar />
         <BrowserRouter>
           <Routes>
           <Route path="/" element={<Login />} />

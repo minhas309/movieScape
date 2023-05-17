@@ -22,8 +22,8 @@ export const theme = createTheme({
         fontWeightRegular: 400,
         fontWeightMedium: 500,
         fontWeightBold: 700,
-        verysmall:{
-            fontSize:"20px",
+        h1:{
+            fontSize:"10px",
             fontWeight: "900px",
         }
     },

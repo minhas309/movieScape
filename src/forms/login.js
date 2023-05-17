@@ -2,8 +2,13 @@ import { Box, Button, TextField, Typography } from "@mui/material";
 import React from "react";
 import Cover from "../images/cover.png"
 
+
+
 const login = () => {
+
     return (<>
+
+
         <Box
          sx={{
             display: "flex",
@@ -28,7 +33,7 @@ const login = () => {
                     <Typography sx={{
                         mb:"10px"
                     }}>
-                        LOGIN
+                        MOVIE SCAPE
                     </Typography>
                     <TextField
                         sx={{
@@ -51,13 +56,21 @@ const login = () => {
                         required
                     />
                     <Typography
-                    variant="verysmall"
+                    variant="h1"
+                    sx={{
+                        textDecoration:"underline",
+                        mb:"10px",
+                        textAlign:"right",
+                        color:"secondary.main",
+                        cursor:"pointer",
+                    }}
                     >
-                        forget Password
+                        MOVIE SACPE
                     </Typography>
                     <Button
                     type="submit"
-                    variant="contained">Login</Button>  
+                    variant="contained"
+                    sx={{backgroundColor:"secondary.main"}}>Login</Button>  
                 </Box>
             </form>
         </Box>
