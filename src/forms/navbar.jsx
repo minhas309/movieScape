@@ -1,7 +1,7 @@
 import React from "react";
 import AdbIcon from '@mui/icons-material/Adb';
 import MenuIcon from '@mui/icons-material/Menu';
-import { AppBar, Avatar, Box, Button, Container, IconButton, Menu, MenuItem, Toolbar, Tooltip, Typography } from '@mui/material';
+import { AppBar,  Box, Button, Container, IconButton, Menu, MenuItem, Toolbar,  Typography } from '@mui/material';
 
 const navbar = () => {
 
