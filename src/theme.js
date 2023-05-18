@@ -8,6 +8,7 @@ export const theme = createTheme({
         },
         primary: {
             main: "#f44336",
+            postColor: "#24292f",
         },
         secondary: {
             main: "#3f51b5",

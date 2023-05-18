@@ -5,7 +5,9 @@ import { theme } from './theme';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Login from "./forms/login";
 import Signup from './forms/signup';
-import Navbar from './forms/navbar';
+import Post from './componenets/post';
+import Navbar from './componenets/navbar';
+
 
 function App() {
   return (
@@ -15,7 +17,8 @@ function App() {
         <Navbar />
         <BrowserRouter>
           <Routes>
-          <Route path="/" element={<Login />} />
+          <Route path="/" element={<Post />} />
+          <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />}/>
           </Routes>
         </BrowserRouter>
