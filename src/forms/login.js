@@ -65,7 +65,7 @@ const login = () => {
                         cursor:"pointer",
                     }}
                     >
-                        MOVIE SACPE
+                        FORGET PASSWORD?
                     </Typography>
                     <Button
                     type="submit"

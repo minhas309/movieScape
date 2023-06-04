@@ -16,7 +16,7 @@ const signup = () => {
             sx={{
                 display: "flex",
                 alignItems: "center",
-                justifyContent: "end",
+                justifyContent: "center",
                 height: "100vh",
                 backgroundImage: `url(${Cover})`,
                 backgroundSize: "contain",
