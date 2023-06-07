@@ -6,11 +6,11 @@ import React, { useRef } from "react";
 const post = () => {
 
   const editorRef = useRef(null);
-  const log = () => {
-    if (editorRef.current) {
-      console.log(editorRef.current.getContent());
-    }
-  };
+  // const log = () => {
+  //   if (editorRef.current) {
+  //     console.log(editorRef.current.getContent());
+  //   }
+  // };
 
     return (
         <>
@@ -20,7 +20,7 @@ const post = () => {
           <Editor
             tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
             onInit={(evt, editor) => editorRef.current = editor}
-            initialValue='<p>This is the initial content of the editor.</p>'
+            initialValue="<p>What's on your mind.</p>"
             init={{
               height: 500,
               mobile: {
