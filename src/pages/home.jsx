@@ -5,6 +5,7 @@ import FeedIcon from '@mui/icons-material/Feed';
 import SettingsIcon from '@mui/icons-material/Settings';
 import Posts from '../componenets/post';
 import Menu from '../componenets/menubar'
+import Post from '../componenets/postformat';
 
 function Home() {
 
@@ -49,7 +50,7 @@ function Home() {
         <Grid item container direction={"column"} xs={12} maxWidth={true}>
           <Grid item container md={3}>
             <Posts></Posts>
-            <Posts></Posts>
+            <Post></Post>
           </Grid>
         </Grid>
         <Divider orientation="vertical" flexItem />

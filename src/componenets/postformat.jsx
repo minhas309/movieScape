@@ -12,7 +12,8 @@ const postformat = () => {
             <Box sx={{
                 backgroundColor: "white",
                 p: 2,
-                border: '2px solid black',
+                width:650,
+                border: '2px solid grey',
             }}>
                 <Box sx={{
                     display: "inline-flex",
