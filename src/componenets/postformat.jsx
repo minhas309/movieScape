@@ -1,4 +1,4 @@
-import { Box, Icon } from "@mui/material";
+import { Box } from "@mui/material";
 import React from "react";
 import imge from "../images/logo.png";
 import PublishIcon from '@mui/icons-material/UploadOutlined';

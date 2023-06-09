@@ -2,10 +2,20 @@ import React from "react";
 import AdbIcon from '@mui/icons-material/Adb';
 import MenuIcon from '@mui/icons-material/Menu';
 import { AppBar,  Box, Button, Container, IconButton, Menu, MenuItem, Toolbar,  Typography } from '@mui/material';
+import { useNavigate } from "react-router-dom";
 
 const navbar = () => {
-
-
+    const navigate = useNavigate();
+  
+    const handleRoute = (val) => {
+        console.log(val)
+        if(val == 'Signup')
+            navigate("/signup");
+        else if (val == 'Login')
+            navigate("/");
+        else
+            navigate("/about");
+    };
     const pages = ['Signup', 'Login', 'About'];
     
     
@@ -22,7 +32,7 @@ const navbar = () => {
 
     return (
         <>
-            
+    
             <AppBar position="static" sx={{
                 backgroundColor:"secondary.main"
             }}>
@@ -44,7 +54,7 @@ const navbar = () => {
                                 textDecoration: 'none',
                             }}
                         >
-                            LOGO
+                            MOVIESCAPE
                         </Typography>
 
                         <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -77,7 +87,7 @@ const navbar = () => {
                                 }}
                             >
                                 {pages.map((page) => (
-                                    <MenuItem key={page} onClick={handleCloseNavMenu}>
+                                    <MenuItem key={page} >
                                         <Button textAlign="center" variant="contained">{page}</Button>
                                     </MenuItem>
                                 ))}
@@ -100,11 +110,12 @@ const navbar = () => {
                                 textDecoration: 'none',
                             }}
                         >
-                            LOGO
+                            MOVIESCAPE
                         </Typography>
                         <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
                             {pages.map((page) => (
                                 <Button
+                                    className="button1"
                                     key={page}
                                     onClick={handleCloseNavMenu}
                                     sx={{ my: 2, color: 'white', display: 'block' }}

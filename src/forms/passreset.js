@@ -1,5 +1,5 @@
 import { Box, Button, TextField, Typography } from "@mui/material";
-import React from "react";
+import React, { useState } from "react";
 import Cover from "../images/cover.png"
 import Navbar from '../componenets/navbar';
 import { useNavigate, Link } from "react-router-dom";
@@ -10,7 +10,14 @@ const login = () => {
     const handleRoute = () => {
       navigate("/home");
     };
+    const [buttonText, setButtonText] = useState("Get Code");
+    const [showTextField, setShowTextField] = useState(false);
 
+    const handleToggleTextField = () => {
+        setShowTextField(true);
+        setButtonText("Confirm");
+
+    };
     return (<>
 
         <Navbar/>
@@ -38,7 +45,7 @@ const login = () => {
                     <Typography sx={{
                         mb:"10px"
                     }}>
-                        MOVIE SCAPE
+                        Forget Password
                     </Typography>
                     <TextField
                         sx={{
@@ -46,41 +53,25 @@ const login = () => {
                             mb:"10px"
                         }}
                         type="email"
-                        label="email"
-                        placeholder="Email"
+                        label="Enter email"
+                        placeholder="Enter Email"
                         required
                     />
-                    <TextField
+                    {showTextField &&<TextField
                         sx={{
                             borderRadius: "10px",
                             mb:"10px"
                         }}
-                        type="password"
-                        label="password"
-                        placeholder="Password"
+                        label="Enter code"
+                        placeholder="Code"
                         required
-                    />
-                    <Typography
-                    variant="h1"
-                    sx={{
-                        textDecoration:"underline",
-                        mb:"10px",
-                        textAlign:"right",
-                        color:"secondary.main",
-                        cursor:"pointer",
-                    }}
-                    component={Link} to="/passreset"
-                    >
-                        FORGET PASSWORD?
-                    </Typography>
+                    />}
                     <Button
+                    className="btn"
                     type="submit"
                     variant="contained"
-                    sx={{backgroundColor:"secondary.main", mb:"10px",}}>Login</Button>  
-                    <Button
-                    variant="contained"
-                    component={Link} to="/signup"
-                    sx={{backgroundColor:"secondary.main"}}>Sign Up</Button>
+                    onClick={handleToggleTextField}
+                    sx={{backgroundColor:"secondary.main", mb:"10px",}}>{buttonText}</Button>  
                 </Box>
             </form>
         </Box>

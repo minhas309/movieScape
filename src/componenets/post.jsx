@@ -14,19 +14,22 @@ const post = () => {
 
     return (
         <>
-        <Box sx={{
+        <Box maxWidth={true} sx={{
           backgroundSize: "contain",
+          
         }}>
           <Editor
             tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
             onInit={(evt, editor) => editorRef.current = editor}
             initialValue="<p>What's on your mind.</p>"
             init={{
-              height: 500,
+              width:650,
+              max_height: 200,
               mobile: {
                 menubar: true
               },
               menubar: false,
+              statusbar: false,
               plugins: [
                 'advlist', 'autolink', 'lists', 'link', 'image', 'charmap',
                 'anchor', 'searchreplace', 'visualblocks', 'code', 'fullscreen',

@@ -2,16 +2,21 @@ import { Box, Button, TextField, Typography, Grid, FormLabel, RadioGroup, FormCo
 import React from "react";
 import Cover from "../images/cover.png"
 import { Radio } from "@mui/material";
+import Navbar from '../componenets/navbar';
+import { useNavigate, Link } from "react-router-dom";
 // import { DatePicker, LocalizationProvider, AdapterDayjs } from "@mui/x-date-pickers";
 // import dayjs from "dayjs";
 // import { DemoContainer, DemoItem } from '@mui/x-date-pickers/internals/demo';
 
 
 const signup = () => {
-
+    const navigate = useNavigate();
+    const handleRoute = () => {
+      navigate("/");
+    };
     return (<>
 
-
+        <Navbar/>
         <Box
             sx={{
                 display: "flex",
@@ -22,7 +27,7 @@ const signup = () => {
                 backgroundSize: "contain",
                 p: "30px",
             }}>
-            <form>
+             <form onSubmit={() => handleRoute()}>
                 <Box sx={{
                     display: "flex",
                     justifyContent: "center",
@@ -154,6 +159,7 @@ const signup = () => {
                             color: "secondary.main",
                             cursor: "pointer",
                         }}
+                        component={Link} to="/"
                     >
                         Already have account? Login now
                     </Typography>
