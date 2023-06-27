@@ -1,6 +1,6 @@
 import { Box } from "@mui/material";
 import React from "react";
-import imge from "../images/logo.png";
+import imge from "../images/Abdullah.jpg";
 import PublishIcon from '@mui/icons-material/UploadOutlined';
 import FileDownloadIcon from '@mui/icons-material/DownloadOutlined';
 import InsertCommentOutlinedIcon from '@mui/icons-material/InsertCommentOutlined';

@@ -2,7 +2,7 @@ import { Box, Button, TextField, Typography } from "@mui/material";
 import React, { useState } from "react";
 import Cover from "../images/cover.png"
 import Navbar from '../componenets/navbar';
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 
 const login = () => {
